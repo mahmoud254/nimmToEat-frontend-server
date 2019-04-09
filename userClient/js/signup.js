@@ -40,7 +40,7 @@ function request_response() {
     
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status == 200|| this.status==204) {
             if (this.response) {
                 let response = JSON.parse(this.response)
                 localStorage.setItem("userId",response.user_id)
