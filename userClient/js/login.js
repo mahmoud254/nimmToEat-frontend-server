@@ -22,7 +22,6 @@ function request_response_login() {
                  //window.location.href = "../index.html";
                }
                else {
-			console.log(11111111111111111)
                    document.getElementById("emailLogin").value=""
                    document.getElementById("passwordLogin").value=""
                  document.getElementById("wrong").style.display = "table"
