@@ -357,7 +357,7 @@
 
 		.thumbnails .box {
 			margin: 0 1em 2em 1em;
-			width: 30%;
+			width: 20%;
 		}
 
 			@media screen and (max-width: 1280px) {
