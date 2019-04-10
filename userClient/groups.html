@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Friends </title>
+    <title>Groups </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -60,14 +60,14 @@
         <div class="thumbnails">
             <hr>
             <div style="width:60%">
-                <h2>Friends</h2>
-                <textarea rows="1" style="align-self: center; margin-bottom: 7%"placeholder="Insert your friend email here"></textarea>
+                <h2>Groups</h2>
+                <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Enter group name"></textarea>
             </div>
 
-            <button type="submit" id="addFriendBtn" style="align-self: center; margin-left: 2%" > Add </button>
+            <button type="submit" id="addGroupBtn" style="align-self: center; margin-left: 2%"> Add </button>
 
         </div>
-    
+
 
         <div class="tab-content">
 
@@ -76,13 +76,14 @@
 
                 <div class="thumbnails">
                     <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
-                        <h2>Friends' List</h2>
+                        <h2>My Groups</h2>
                     </div>
-                    <div id="friend_div" class="box" style="display:none"> 
-                        <img  class="image fit" alt="" />
+                    <div id="group_div" class="box">
+                        <img class="image fit" alt="" />
                         <div class="inner">
-                            <h3>Mayar AAA</h3>
-                            <button class="button style3 fit">Unfriend</button>
+                            <h3>os</h3>
+                            <button class="button style3 fit">Add Friend</button>
+                            <button class="button style3 fit">Delete Group</button>
                             <hr>
 
                         </div>
@@ -93,14 +94,58 @@
 
             </div>
 
-            
+
 
 
         </div>
     </div>
+    <div id="group_section" >
+        <div class="box">
+            <h2>OS</h2>
+        </div>
+        <div id="main" class="group">
+            <div class="thumbnails">
+                <hr>
+                <div style="width:60%">
+                    <h2>Members</h2>
+                    <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Insert your friend email here"></textarea>
+                </div>
 
+                <button type="submit" id="addFriendBtn" style="align-self: center; margin-left: 2%"> Add </button>
+
+            </div>
+
+
+            <div class="tab-content">
+
+                <!-- all tab -->
+                <div class="inner" id="all">
+
+                    <div class="thumbnails">
+                        <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                            <h2>Members' List</h2>
+                        </div>
+                        <div id="friend_div" class="box">
+                            <img class="image fit" alt="" />
+                            <div class="inner">
+                                <h3>Mayar AAA</h3>
+                                <button class="button style3 fit">Unfriend</button>
+                                <hr>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
     </div>
-
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
@@ -120,7 +165,7 @@
     <!-- my own scripts -->
     <script src="js/main.js"></script>
     <script src="js/requestPhoto.js"></script>
-    <script src="js/friends.js"></script>
+    <script src="js/group.js"></script>
 
 
 

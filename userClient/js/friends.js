@@ -20,7 +20,7 @@ function listFriends() {
       response.forEach(friend => {
         let div = document.createElement("div")
         //rate(div)
-        friend_div.appendChild(div)
+        friends_div.appendChild(div)
         div.innerHTML = friend_div.innerHTML
         div.setAttribute("id", friend.friend_id)
         div.setAttribute("class", "box")
@@ -39,7 +39,7 @@ function listFriends() {
       });
     }
   };
-  xhttp.open("GET", "http://127.0.0.1:3000/friends");
+  xhttp.open("GET", `http://127.0.0.1:3000/friends/${localStorage.getItem("userId")}`);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send()
 };
