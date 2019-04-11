@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Add Order</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- for the header -->
+    <link rel="stylesheet" href="./assets/css/demo.css">
+    <link rel="stylesheet" href="./assets/css/header-user-dropdown.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <!-- my own css -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- rating -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="stars.css" /> -->
+
+</head>
+
+<body id="top">
+
+
+    <!-- header -->
+    <header class="header-user-dropdown">
+
+        <div class="header-limiter">
+            <h1><a href="index.html">Nimm<span>ToEat</span></a></h1>
+
+            <nav>
+                <a href="index.html" class="button">Home</a>
+                <a href="friends.html" class="button">Friends</a>
+                <a href="groups.html" class="button">Groups</a>
+                <a href="orders.html" class="button">Orders</a>
+            </nav>
+
+
+            <div class="header-user-menu">
+                <img src="images/2.jpg" alt="User Image" />
+
+                <ul>
+                    <li><a href="#" class="highlight">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- Main -->
+    <div id="main">
+        <div class="thumbnails">
+            <hr>
+            <div style="width:30%">
+                <h2>Add Order</h2>
+                <!-- status selector -->
+                <div class="inner">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span>Select meal</span>
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <input id="addMealChoice" type="hidden" name="meal">
+                        <ul class="dropdown-menu">
+                            <li>Lunch</li>
+                            <li>Breakfast</li>
+                        </ul>
+
+                    </div>
+                    <textarea rows="1" style="align-self: center; margin-bottom: 4%;margin-top: 4%;width: 300px;"
+                    placeholder="Insert restaurant name"></textarea>
+                <div>
+                    <textarea rows="1" style="align-self: center; margin-bottom: 2%;width: 300px"
+                        placeholder="friend email or group name here"></textarea>
+                    <button class="style3" type="submit" id="addFriendBtn" style="margin-left: 57%"> Add</button>
+                </div>
+                <div class="upload-btn-wrapper">
+                        <textarea rows="1" style="align-self: center; margin-bottom: 4%;margin-top: 4%;width: 300px"
+                        placeholder="Choose menu image"></textarea>
+                    <button  class="style3" aria-required="true" style="margin-left: 71%">Browse</button>
+                    <input type="file"  class="uploadImage" name="myfile" required />
+                </div>
+                <div>
+                <button  type="submit" style="background-color:crimson;width:300px" aria-required="true" >Publish</button>
+                </div>
+                </div>
+
+            </div>
+            <div class="tab-content" style="width:30%">
+
+                    <!-- all tab -->
+                    <div class="inner" id="all">
+        
+                        <div class="thumbnails">
+                            <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                                <h2>Friends' List</h2>
+                            </div>
+                            <div id="friend_div" class="box"></div>
+                                <img class="image fit" alt="" />
+                                <div class="inner">
+                                    <h3>Mayar AAA</h3>
+                                    <button class="button style3 fit">Unfriend</button>
+                                    <hr>
+        
+                                </div>
+        
+                            </div>
+                            <div id="friend_div" class="box"></div>
+                            <img class="image fit" alt="" />
+                            <div class="inner">
+                                <h3>Mayar AAA</h3>
+                                <button class="button style3 fit">Unfriend</button>
+                                <hr>
+    
+                            </div>
+    
+                        </div>
+                        </div>
+        
+                    </div>
+        
+        
+        
+        
+                </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <p>All rights reserved. </p>
+
+            <p class="copyright">&copy; 2019 NimmToEat Inc. </p>
+        </div>
+    </footer>
+
+    <!-- Scripts for bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- my own scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/requestPhoto.js"></script>
+    <script src="js/friends.js"></script>
+
+
+
+
+    <!-- header -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
