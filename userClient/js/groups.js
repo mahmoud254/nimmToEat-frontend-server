@@ -1,6 +1,7 @@
 let groups_div = document.getElementsByClassName("thumbnails")[1]
 let group_div = document.getElementById("group_div")
-let friends_div = document.getElementsByClassName("thumbnails")[2]
+let members_div = document.getElementById("group_section")
+let friends_div = document.getElementsByClassName("thumbnails")[3]
 let friend_div = document.getElementById("friend_div")
 let add_friendBtn=document.getElementById("addFriendBtn")
 let add_groupBtn=document.getElementById("addGroupBtn")
@@ -29,26 +30,28 @@ function listGroups() {
         //rate(div)
         groups_div.appendChild(div)
         div.innerHTML = group_div.innerHTML
-        div.setAttribute("id", group.group_id)
+        div.setAttribute("id", group.id)
         div.setAttribute("class", "box")
         div.getElementsByTagName("h3")[0].innerText = group.name
         // div.getElementsByTagName("h3")[1].innerText=book.author_id.first_name
         div.style.display = true
-        div.getElementsByTagName('button')[0].setAttribute('id', group.group_id)
+        div.getElementsByTagName('button')[0].setAttribute('id', group.id)
 
         // add event listeners to send you to author page
-        div.getElementsByTagName('button')[0].addEventListener('click', () => {
-          Remove(group.group_id)
-        })
         div.getElementsByTagName('button')[1].addEventListener('click', () => {
-          listGroupMembers(group.group_id)
+          Remove(group.id)
+        })
+        div.getElementsByTagName('button')[0].addEventListener('click', () => {
+          friends_div.innerHTML=""
+          members_div.getElementsByTagName("h2")[0].innerText=group.name
+          listGroupMembers(group.id)
         })
         let groupImage=div.getElementsByTagName("img")[0]
         // getImage(friend.picture,friendImage)
       });
     }
   };
-  xhttp.open("GET", `http://127.0.0.1:3000/groups/${localStorage.getItem("userId")}`);
+  xhttp.open("GET", `http://127.0.0.1:3000/groups/users/${localStorage.getItem("userId")}`);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send()
 };
@@ -65,26 +68,24 @@ function listGroupMembers(id) {
         //rate(div)
         friends_div.appendChild(div)
         div.innerHTML = friend_div.innerHTML
-        div.setAttribute("id", friend.friend_id)
+        div.setAttribute("id", friend.member_id)
         div.setAttribute("class", "box")
         div.getElementsByTagName("h3")[0].innerText = friend.name
         // div.getElementsByTagName("h3")[1].innerText=book.author_id.first_name
-        div.style.display = true
         // add event listeners to send you to author page
         div.getElementsByTagName('button')[0].addEventListener('click', () => {
-          RemoveFromGroup(friend.friend_id)
+          RemoveFromGroup(friend.member_id)
         })
         let friendImage=div.getElementsByTagName("img")[0]
-        friends_div.style.display= true
+        div.style.display= true
         // getImage(friend.picture,friendImage)
       });
+      members_div.style.display= "block"
     }
   };
-  xhttp.open("POST", `http://127.0.0.1:3000/groups/${id}`);
+  xhttp.open("get", `http://127.0.0.1:3000/groups/${id}`);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send(SON.stringify({
-    user_id:localStorage.getItem("userId"),
-  }))
+  xhttp.send()
 };
 
 function addGroup(name) {
@@ -109,11 +110,12 @@ function addMember(email) {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200||this.status == 204) {
       if (this.response){
-        window.location.reload()
+        friends_div.innerHTML=""
+        listGroupMembers(localStorage.getItem("groupId"))
       }
     }
   };
-  xhttp.open("post", `http://127.0.0.1:3000/groups/${localStorage.getItem("groupId")}`);
+  xhttp.open("post", `http://127.0.0.1:3000/groups/${localStorage.getItem("groupId")}/addmember`);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(JSON.stringify({
     user_id:localStorage.getItem("userId"),
@@ -131,11 +133,9 @@ function Remove(id) {
       }
     }
   };
-  xhttp.open("post", `http://127.0.0.1:3000/groups/${id}/delete`);
+  xhttp.open("get", `http://127.0.0.1:3000/groups/${id}/delete`);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send(JSON.stringify({
-    user_id:localStorage.getItem("userId")
-  }))
+  xhttp.send()
 };
 
 function RemoveFromGroup(id) {
