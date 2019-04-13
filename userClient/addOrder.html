@@ -79,12 +79,10 @@
                 <div>
                     <textarea rows="1" style="align-self: center; margin-bottom: 2%;width: 300px"
                         placeholder="friend email or group name here"></textarea>
-                    <button class="style3" type="submit" id="addFriendBtn" style="margin-left: 57%"> Add</button>
+                    <button class="style3" type="submit" id="addFriendBtn" style="margin-left: 58%"> Add</button>
                 </div>
-                <div class="upload-btn-wrapper">
-                        <textarea rows="1" style="align-self: center; margin-bottom: 4%;margin-top: 4%;width: 300px"
-                        placeholder="Choose menu image"></textarea>
-                    <button  class="style3" aria-required="true" style="margin-left: 71%">Browse</button>
+                <div class="upload-btn-wrapper" style="width:100%">
+                    <button  class="style3" aria-required="true" style="width:74%;margin-top: 2%;background-color:lightseagreen">Browse</button>
                     <input type="file"  class="uploadImage" name="myfile" required />
                 </div>
                 <div>
@@ -93,32 +91,25 @@
                 </div>
 
             </div>
-            <div class="tab-content" style="width:30%">
+
+            <div class="tab-content" style="width:40%;overflow-y:auto; max-height:450px">
 
                     <!-- all tab -->
-                    <div class="inner" id="all">
-        
-                        <div class="thumbnails">
-                            <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
-                                <h2>Friends' List</h2>
-                            </div>
-                            <div id="friend_div" class="box"></div>
+                    <div class="inner" id="all" style="width:100%">
+                        <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                            <h2>Friends' Invited</h2>
+                        </div>        
+                        <div class="thumbnails" >
+
+                            <div id="friend_div" class="box" style="display:none">
                                 <img class="image fit" alt="" />
-                                <div class="inner">
+                                <div class="inner" >
                                     <h3>Mayar AAA</h3>
-                                    <button class="button style3 fit">Unfriend</button>
+                                    <button class="button style3 fit">Remove</button>
                                     <hr>
         
                                 </div>
         
-                            </div>
-                            <div id="friend_div" class="box"></div>
-                            <img class="image fit" alt="" />
-                            <div class="inner">
-                                <h3>Mayar AAA</h3>
-                                <button class="button style3 fit">Unfriend</button>
-                                <hr>
-    
                             </div>
     
                         </div>
@@ -157,7 +148,7 @@
     <!-- my own scripts -->
     <script src="js/main.js"></script>
     <script src="js/requestPhoto.js"></script>
-    <script src="js/friends.js"></script>
+    <script src="js/addOrder.js"></script>
 
 
 
