@@ -15,7 +15,6 @@
 
     <!-- my own css -->
     <link rel="stylesheet" href="./css/main.css">
-
     <!-- rating -->
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="stars.css" /> -->
@@ -38,7 +37,7 @@
 
 
             <div class="header-user-menu">
-                <!-- <img src="images/2.jpg" alt="User Image" /> -->
+                <img src="images/2.jpg" alt="User Image" />
 
                 <ul>
                     <li><a href="#" class="highlight">Logout</a></li>
@@ -57,111 +56,50 @@
     <div id="main">
         <div class="thumbnails">
             <hr>
-            <div style="width:60%">
+            <div style="width:60%;margin-right: 10%">
                 <h2>Orders</h2>
                 <!-- <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Enter group name"></textarea> -->
             </div>
 
-            <button type="submit" id="addGroupBtn" style="align-self: center; margin-left: 2%"> Start new order </button>
+            <button class="style3" type="button" id="addGroupBtn" style="align-self: center"> Start new order </button>
         </div>
-        
-        <table style="width:80% ;align-self: center;margin-left: 8%">
+        <table class="field-wrap" style="width:80% ;align-self: center;margin-left: 10%;margin-right: 10%">
             <tr>
-              <th>Order name</th>
-              <th>Resturants</th>
-              <th >Invited</th>
-              <th >Joined</th>
-              <th >Status</th>
-              <th >Actions</th>
+              <th class="cell">Order name</th>
+              <th class="cell">Resturants</th>
+              <th class="cell">Invited</th>
+              <th class="cell">Joined</th>
+              <th class="cell">Status</th>
+              <th class="cell" style="width: 1000px;">Actions</th>
             </tr>
-            <tr id="User_id">
+            <tr id="User_id" style="text-align: center">
               <td>Bill Gates</td>
               <td>55577854</td>
               <td>55577855</td>
               <td>55577855</td>
               <td>55577855</td>
-              <td> <a href="view" > view</a> <a href="finish.html" > finish</a> <a href="cancel.html" > cancel</a></td>
+              <td>
+                  <button class="style2" type="submit" id="addFriendBtn">View</button>
+                  <button class="style2" type="submit" id="addFriendBtn">Finish</button>
+                  <button class="style2" type="submit" id="addFriendBtn">Cancel</button>
+                </td>
+
             </tr>
+            <tr id="User_id" style="text-align: center">
+                    <td>Bill Gates</td>
+                    <td>55577854</td>
+                    <td>55577855</td>
+                    <td>55577855</td>
+                    <td>55577855</td>
+                    <td>
+                        <button class="style2" type="submit" id="addFriendBtn"> View</button>
+                        <button class="style2" type="submit" id="addFriendBtn"> Cancel</button>
+                        <button class="style2" type="submit" id="addFriendBtn"> Finish</button>
+                      </td>
+      
+                  </tr>
           </table>
-
-        <div class="tab-content">
-
-            <!-- all tab -->
-            <div class="inner" id="all">
-
-                <div class="thumbnails">
-                    <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
-                        <h2>My Groups</h2>
-                    </div>
-                    <div id="group_div" class="box" style="display:none">
-                        <img class="image fit" alt="" />
-                        <div class="inner">
-                            <h3>os</h3>
-                            <button class="button style3 fit">Add Friend</button>
-                            <button class="button style3 fit">Delete Group</button>
-                            <hr>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-        </div>
-    </div>
-    <div id="group_section" style="display:none">
-        <div class="box">
-            <h2>OS</h2>
-        </div>
-        <div id="main" class="group">
-            <div class="thumbnails">
-                <hr>
-                <div style="width:60%">
-                    <h2>Members</h2>
-                    <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Insert your friend email here"></textarea>
-                </div>
-
-                <button type="submit" id="addFriendBtn" style="align-self: center; margin-left: 2%"> Add </button>
-
-            </div>
-
-
-            <div class="tab-content">
-
-                <!-- all tab -->
-                <div class="inner" id="all">
-
-                    <div class="thumbnails">
-                        <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
-                            <h2>Members' List</h2>
-                        </div>
-
-
-                    </div>
-                    <div id="friend_div" class="box" style="display:none">
-                        <img class="image fit" alt="" />
-                        <div class="inner">
-                            <h3>Mayar AAA</h3>
-                            <button class="button style3 fit">Unfriend</button>
-                            <hr>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </div>
+          </div>
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
@@ -181,7 +119,7 @@
     <!-- my own scripts -->
     <script src="js/main.js"></script>
     <script src="js/requestPhoto.js"></script>
-    <script src="js/groups.js"></script>
+    <script src=""></script>
 
 
 

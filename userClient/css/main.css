@@ -181,3 +181,20 @@ span.choose {
   opacity: 0;
 }
 
+.cell {
+  font-size: 16px;
+  width: 540px;
+  height: 100%;
+  padding: 5px 10px;
+  background: #242122;
+  background-image: none;
+  border: 1px solid #b29fa6;
+  color: #ffffff;
+  border-radius: 0;
+  text-align:center;
+}
+
+.cell:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
