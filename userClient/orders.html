@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>orders list</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- for the header -->
+    <link rel="stylesheet" href="./assets/css/demo.css">
+    <link rel="stylesheet" href="./assets/css/header-user-dropdown.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+    <!-- my own css -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- rating -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="stars.css" /> -->
+</head>
+
+<body id="top">
+
+    <!-- header -->
+    <header class="header-user-dropdown">
+
+        <div class="header-limiter">
+            <h1><a href="index.html">Nimm<span>ToEat</span></a></h1>
+
+            <nav>
+                <a href="index.html" class="button">Home</a>
+                <a href="friends.html" class="button">Friends</a>
+                <a href="groups.html" class="button">Groups</a>
+                <a href="orders.html" class="button">Orders</a>
+            </nav>
+
+
+            <div class="header-user-menu">
+                <!-- <img src="images/2.jpg" alt="User Image" /> -->
+
+                <ul>
+                    <li><a href="#" class="highlight">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- Main -->
+    <div id="main">
+        <div class="thumbnails">
+            <hr>
+            <div style="width:60%">
+                <h2>Orders</h2>
+                <!-- <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Enter group name"></textarea> -->
+            </div>
+
+            <button type="submit" id="addGroupBtn" style="align-self: center; margin-left: 2%"> Start new order </button>
+        </div>
+        
+        <table style="width:80% ;align-self: center;margin-left: 8%">
+            <tr>
+              <th>Order name</th>
+              <th>Resturants</th>
+              <th >Invited</th>
+              <th >Joined</th>
+              <th >Status</th>
+              <th >Actions</th>
+            </tr>
+            <tr id="User_id">
+              <td>Bill Gates</td>
+              <td>55577854</td>
+              <td>55577855</td>
+              <td>55577855</td>
+              <td>55577855</td>
+              <td> <a href="view" > view</a> <a href="finish.html" > finish</a> <a href="cancel.html" > cancel</a></td>
+            </tr>
+          </table>
+
+        <div class="tab-content">
+
+            <!-- all tab -->
+            <div class="inner" id="all">
+
+                <div class="thumbnails">
+                    <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                        <h2>My Groups</h2>
+                    </div>
+                    <div id="group_div" class="box" style="display:none">
+                        <img class="image fit" alt="" />
+                        <div class="inner">
+                            <h3>os</h3>
+                            <button class="button style3 fit">Add Friend</button>
+                            <button class="button style3 fit">Delete Group</button>
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="group_section" style="display:none">
+        <div class="box">
+            <h2>OS</h2>
+        </div>
+        <div id="main" class="group">
+            <div class="thumbnails">
+                <hr>
+                <div style="width:60%">
+                    <h2>Members</h2>
+                    <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Insert your friend email here"></textarea>
+                </div>
+
+                <button type="submit" id="addFriendBtn" style="align-self: center; margin-left: 2%"> Add </button>
+
+            </div>
+
+
+            <div class="tab-content">
+
+                <!-- all tab -->
+                <div class="inner" id="all">
+
+                    <div class="thumbnails">
+                        <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                            <h2>Members' List</h2>
+                        </div>
+
+
+                    </div>
+                    <div id="friend_div" class="box" style="display:none">
+                        <img class="image fit" alt="" />
+                        <div class="inner">
+                            <h3>Mayar AAA</h3>
+                            <button class="button style3 fit">Unfriend</button>
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <p>All rights reserved. </p>
+
+            <p class="copyright">&copy; 2019 NimmToEat Inc. </p>
+        </div>
+    </footer>
+
+    <!-- Scripts for bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- my own scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/requestPhoto.js"></script>
+    <script src="js/groups.js"></script>
+
+
+
+
+    <!-- header -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
