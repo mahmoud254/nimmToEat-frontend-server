@@ -1104,6 +1104,31 @@
 				background-color: #8f6bc9;
 			}
 
+
+		input[type="submit"].style2,
+		input[type="reset"].style2,
+		input[type="button"].style2,
+		button.style2,
+		.button.style2 {
+			background-color: #ce4a4a;
+		}
+
+			input[type="submit"].style2:hover,
+			input[type="reset"].style2:hover,
+			input[type="button"].style2:hover,
+			button.style2:hover,
+			.button.style2:hover {
+				background-color: #ab91d7;
+			}
+
+			input[type="submit"].style2:active,
+			input[type="reset"].style2:active,
+			input[type="button"].style2:active,
+			button.style2:active,
+			.button.style2:active {
+				background-color: #ce4a4a;
+			}
+
 		@media screen and (max-width: 480px) {
 
 			input[type="submit"],
