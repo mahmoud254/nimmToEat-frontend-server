@@ -14,20 +14,30 @@ function listOrders() {
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(this.response)
             response.forEach(order => {
+                console.log(order)
                 let row = document.createElement("tr")
                 orders_table.appendChild(row)
                 row.innerHTML = order_row.innerHTML
                 row.style.textAlign = "center"
                 row.getElementsByTagName('button')[0].addEventListener('click', () => {
+                    if (order.status=="finished"){
+                        localStorage.setItem("orderStatus","false")    
+                    }
                     localStorage.setItem("orderId",order.id)
+                    localStorage.setItem("creatorId",order.creator_id)
                     window.location.href = "./orderlist.html";
                 })
                 row.getElementsByTagName('button')[1].addEventListener('click', () => {
                     finish(order.id)
+
                 })
                 row.getElementsByTagName('button')[2].addEventListener('click', () => {
                     cancel(order.id)
                 })
+                if (order.creator_id==false || order.status=="finished"){
+                    row.getElementsByTagName('button')[1].disabled=true
+                    row.getElementsByTagName('button')[2].disabled=true
+                }
                 row.getElementsByTagName("td")[0].innerText=order.meal
                 row.getElementsByTagName("td")[1].innerText=order.restaurant
                 row.getElementsByTagName("td")[2].innerText=order.invited
@@ -43,7 +53,7 @@ function listOrders() {
     }))
 };
 
-function finish() {
+function finish(id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -56,7 +66,7 @@ function finish() {
     xhttp.send()
 };
 
-function cancel() {
+function cancel(id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {

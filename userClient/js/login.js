@@ -6,6 +6,7 @@ let login_button = login_div.getElementsByTagName("button")[0];
 login_button.addEventListener("click", (event) => {
     event.preventDefault();
     let password = login_div.getElementsByTagName("input")[1].value;
+    console.log(md5(login_div.getElementsByTagName("input")[1].value).toLowerCase())
     request_response_login();
 
 })
@@ -19,7 +20,7 @@ function request_response_login() {
              if (this.response) {
                  let response = JSON.parse(this.response)
                  localStorage.setItem("userId",response.user_id)
-                 //window.location.href = "../index.html";
+                 window.location.href = "./index.html";
                }
                else {
                    document.getElementById("emailLogin").value=""
@@ -32,7 +33,7 @@ function request_response_login() {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(JSON.stringify({
         email: login_div.getElementsByTagName("input")[0].value,
-        password: md5(login_div.getElementsByTagName("input")[1].value)
+        password: md5(login_div.getElementsByTagName("input")[1].value).toLowerCase()
     }))
 };
 

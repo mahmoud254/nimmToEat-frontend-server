@@ -12,9 +12,9 @@ window.addEventListener("load", (evt) => {
 function listLatestOrders() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-        console.log(this.readyState)
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(this.response)
+            console.log(response)
             response.forEach(order => {
                 let order_elem = document.createElement("div")
                 latest_orders_div.appendChild(order_elem)
@@ -40,9 +40,9 @@ function listLatestOrders() {
 function listFriendsActivity() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-        console.log(this.readyState)
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(this.response)
+            console.log(response)
             response.forEach(activity => {
                 let activity_elem = document.createElement("div")
                 friends_activity_div.appendChild(activity_elem)

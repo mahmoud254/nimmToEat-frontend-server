@@ -26,7 +26,6 @@ function listFriends() {
         div.setAttribute("class", "box")
         div.getElementsByTagName("h3")[0].innerText = friend.name
         // div.getElementsByTagName("h3")[1].innerText=book.author_id.first_name
-        div.style.display = true
         div.getElementsByTagName('button')[0].setAttribute('id', friend.friend_id)
 
         // add event listeners to send you to author page

@@ -9,12 +9,14 @@ publishBtn.addEventListener("click",(evt)=>{
 publish();
 })
 function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var re = /\w+\@\w+\.\w+/gm;
     return re.test(String(email).toLowerCase());
 }
 add_friendBtn.addEventListener("click", (evt) => {
     let textArea = document.getElementsByTagName("textarea")[1]
     let emailOrGroup = textArea.value
+    console.log(emailOrGroup)
+    console.log(validateEmail(emailOrGroup))
     if (validateEmail(emailOrGroup))
         getFriend(emailOrGroup)
     else {
@@ -107,7 +109,7 @@ function publish() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(this.response)
-            console.log("done")
+            window.location.href = "./orders.html";
         }
     };
     let meal=document.getElementsByTagName("span")[1].innerText
@@ -134,7 +136,7 @@ uploadButtons[0].addEventListener('change', function(event) {
   var file = files[0];
   var reader = new FileReader();
   reader.onloadend = function() {
-    menu_image=reader.result
+    user_image=reader.result
   }
   reader.readAsDataURL(file);
 })
