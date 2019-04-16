@@ -61,9 +61,10 @@
                 <!-- <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Enter group name"></textarea> -->
             </div>
 
-            <button class="style3" type="button" id="addGroupBtn" style="align-self: center"> Start new order </button>
+            <button class="style3" type="button" id="addOrderBtn" style="align-self: center"> Start new order </button>
         </div>
-        <table class="field-wrap" style="width:80% ;align-self: center;margin-left: 10%;margin-right: 10%">
+        <table  class="field-wrap" style="width:80% ;align-self: center;margin-left: 10%;margin-right: 10%">
+            <tbody id="mytable">
             <tr>
               <th class="cell">Order name</th>
               <th class="cell">Resturants</th>
@@ -72,32 +73,20 @@
               <th class="cell">Status</th>
               <th class="cell" style="width: 1000px;">Actions</th>
             </tr>
-            <tr id="User_id" style="text-align: center">
+            <tr id="order_div" style="text-align: center;display: none">
               <td>Bill Gates</td>
               <td>55577854</td>
               <td>55577855</td>
               <td>55577855</td>
               <td>55577855</td>
               <td>
-                  <button class="style2" type="submit" id="addFriendBtn">View</button>
-                  <button class="style2" type="submit" id="addFriendBtn">Finish</button>
-                  <button class="style2" type="submit" id="addFriendBtn">Cancel</button>
+                  <button class="style2" type="submit">View</button>
+                  <button class="style2" type="submit">Finish</button>
+                  <button class="style2" type="submit">Cancel</button>
                 </td>
 
             </tr>
-            <tr id="User_id" style="text-align: center">
-                    <td>Bill Gates</td>
-                    <td>55577854</td>
-                    <td>55577855</td>
-                    <td>55577855</td>
-                    <td>55577855</td>
-                    <td>
-                        <button class="style2" type="submit" id="addFriendBtn"> View</button>
-                        <button class="style2" type="submit" id="addFriendBtn"> Cancel</button>
-                        <button class="style2" type="submit" id="addFriendBtn"> Finish</button>
-                      </td>
-      
-                  </tr>
+                  </tbody>
           </table>
           </div>
     <!-- Footer -->
@@ -119,7 +108,7 @@
     <!-- my own scripts -->
     <script src="js/main.js"></script>
     <script src="js/requestPhoto.js"></script>
-    <script src=""></script>
+    <script src="js/orders.js"></script>
 
 
 

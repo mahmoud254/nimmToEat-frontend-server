@@ -119,7 +119,7 @@ function publish() {
     xhttp.send(JSON.stringify({
         meal: meal,
         restaurant_name: restaurant_name,
-        status: "invited",
+        status: "waiting",
         creator_id: creator_id,
         menu_image: menu_image,
         ordermembers:orderMembersArr
