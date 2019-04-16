@@ -19,6 +19,7 @@ function listOrders() {
                 row.innerHTML = order_row.innerHTML
                 row.style.textAlign = "center"
                 row.getElementsByTagName('button')[0].addEventListener('click', () => {
+                    localStorage.setItem("orderId",order.id)
                     window.location.href = "./orderlist.html";
                 })
                 row.getElementsByTagName('button')[1].addEventListener('click', () => {

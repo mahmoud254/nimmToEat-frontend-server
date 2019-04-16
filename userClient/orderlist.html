@@ -54,63 +54,135 @@
     <div id="main">
         <div class="thumbnails">
             <hr>
-            <div style="width:60%">
+            <div style="width:60%;margin-left: 5%">
                 <h2>Orders Details</h2>
                 <!-- <textarea rows="1" style="align-self: center; margin-bottom: 7%" placeholder="Enter group name"></textarea> -->
             </div>
 
             <!-- <button type="submit" id="addGroupBtn" style="align-self: center; margin-left: 2%"> Start new order </button> -->
-            <div> 
+            <div style="margin-right: 10%">
                 <ul>
-                    <li><a href="viewinvitedfriends.html" class="highlight">View invited friends</a></li>
-                    <li><a href="viewinvitedfriends.html" class="highlight">Friends joined the order</a></li>
+                    <li class="popup2"><button class="button style3 fit">view menu</button>
+                        <div class="popuptext2" id="myPopup3">
+                            <img id="test"  style="width:90%;height: 500px" class="image" alt="" />
+                        </div>
+                    </li>
+                    <li class="popup"><button class="button style3 fit">invited</button>
+                        <div class="popuptext" id="myPopup">
+                            <div class="inner" id="all">
+
+                                <div class="thumbnails" style="overflow-y:auto;max-height:300px;">
+                                    <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                                        <h2>Invited friends</h2>
+                                    </div>
+                                    <div id="friend_div" class="box" style="display:none">
+                                        <img class="image fit" alt="" />
+                                        <div class="inner">
+                                            <h3>Mayar AAA</h3>
+                                            <button class="button style3 fit">Unfriend</button>
+                                            <hr>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+
+
+
+
+
+
+                    <li class="popup"><button class="button style3 fit">Joined</button>
+                        <div class="popuptext" id="myPopup2">
+                            <div class="inner" id="all">
+
+                                <div class="thumbnails" style="overflow-y:auto;max-height:300px;">
+                                    <div class="box" style="width:93%; text-align: left;padding-left: 5%;">
+                                        <h2>Joined friends</h2>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
-        
-        <table style="width:80% ;align-self: center;margin-left: 8%">
-            <tr>
-              <th>Person</th>
-              <th>Item</th>
-              <th >amount</th>
-              <th>Price</th>
-              <th >comment</th>
-            </tr>
-            <tr id="User_id">
-              <td>Bill Gates</td>
-              <td>55577854</td>
-              <td>55577855</td>
-              <td>55577855</td>
-              <td>55577855</td>
-              </tr>
-          </table>
-          
-          <div id="div">
+        <table class="field-wrap" style="width:80% ;align-self: center;margin-left: 8%">
+            <tbody id="mytable">
+                <tr>
+                    <th class="cell">Person</th>
+                    <th class="cell">Item</th>
+                    <th class="cell">amount</th>
+                    <th class="cell">Price</th>
+                    <th class="cell">comment</th>
+                    <th class="cell">Action</th>
+                </tr>
+                <tr id="order_div" style="text-align: center;display: none">
+                    <td>Bill Gates</td>
+                    <td>55577854</td>
+                    <td>55577855</td>
+                    <td>55577855</td>
+                    <td>55577855</td>
+                    <td>
+                        <button class="style2" type="submit">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="div" style="width:80% ;align-self: center;margin-left: 13%;margin-top: 5%">
             <div id="input">
-                ItemName<input type="text" value="" style="width: 200px" />
-                Comment<input type="text" value="" style="width: 200px" />
-                <h4>Amount</h4>
-                <select name="amount" style="width: 100px" >
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                <h4>Price</h4>
-                  <select name="amount" style="width: 100px" >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                </select>  
+                <h4 style="float:left;width: 100px;margin-top: 1%">ItemName</h4>
+                <input type="text" value="" style="float:left;width: 200px" />
+                <h4 style="float:left;width: 100px;margin-left: 2%;margin-top: 1%">Comment</h4>
+                <input type="text" value="" style="float:left;width: 200px" />
+
+                <div class="dropdown" style="float:left;width: 100px;margin-left: 5%">
+                    <div class="select">
+                        <span id="amount">Amount</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input id="addnumberOfItemsChoice" type="hidden" name="meal">
+                    <ul class="dropdown-menu">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+
+                </div>
+                <div class="dropdown" style="float:left;width: 100px;margin-left: 5%">
+                    <div class="select">
+                        <span id="price">Price</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input id="addPriceChoice" type="hidden" name="meal">
+                    <ul class="dropdown-menu">
+                        <li>5</li>
+                        <li>10</li>
+                    </ul>
+
+                </div>
 
                 <div>
-                <button  type="submit" style="width:100px" >Add</button>
+                    <button id="addItem" class="style3" type="submit" style="width:30%;margin-left: 32%;margin-top: 5%">Add</button>
                 </div>
             </div>
-        </div> 
-       
+        </div>
+
     </div>
+
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
@@ -130,7 +202,7 @@
     <!-- my own scripts -->
     <script src="js/main.js"></script>
     <script src="js/requestPhoto.js"></script>
-    <script src="js/groups.js"></script>
+    <script src="js/viewOrder.js"></script>
 
 
 
