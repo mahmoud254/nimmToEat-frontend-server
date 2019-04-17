@@ -23,6 +23,9 @@ function listOrders() {
                     if (order.status=="finished"){
                         localStorage.setItem("orderStatus","false")    
                     }
+                    else{
+                        localStorage.setItem("orderStatus","true") 
+                    }
                     localStorage.setItem("orderId",order.id)
                     localStorage.setItem("creatorId",order.creator_id)
                     window.location.href = "./orderlist.html";
